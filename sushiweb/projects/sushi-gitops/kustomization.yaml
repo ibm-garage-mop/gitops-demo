@@ -2,13 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  # - ../../base/limits
-  # - ../../base/network-policies
-  # - ../../base/app
   - ../../base
 
-patches:
-  - deployment.yaml
+# patches:
+#   - deployment.yaml
 
 # transformers:
 #   - ../../transformers/setProject

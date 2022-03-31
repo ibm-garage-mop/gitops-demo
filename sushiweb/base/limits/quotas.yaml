@@ -4,7 +4,7 @@ metadata:
   name: resource-quotas
 spec:
   hard:
-    pods: '4'
+    pods: '2'
     requests.cpu: '1'
     requests.memory: 1Gi
     requests.storage: 2Gi
