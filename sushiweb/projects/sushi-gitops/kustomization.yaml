@@ -7,5 +7,8 @@ resources:
   # - ../../base/app
   - ../../base
 
+patches:
+  - deployment.yaml
+
 # transformers:
 #   - ../../transformers/setProject
