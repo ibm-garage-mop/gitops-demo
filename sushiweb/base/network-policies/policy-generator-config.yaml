@@ -1,0 +1,16 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: default-network-policies
+policyDefaults:
+  namespace: policies
+  remediationAction: inform
+  placement:
+    clusterSelectors:
+      vendor: "OpenShift"
+policies:
+  - name: default-network-policies
+    manifests:
+      - path: allow-ingress.yaml
+      - path: allow-monitoring.yaml
+      - path: allow-same-namespace.yaml
