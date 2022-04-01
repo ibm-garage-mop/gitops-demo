@@ -2,8 +2,10 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
   name: default-network-policies
+placementBindingDefaults:
+  name: binding-network-policies
 policyDefaults:
-  namespace: policies
+  namespace: rhacm-policies
   remediationAction: inform
   placement:
     clusterSelectors:
