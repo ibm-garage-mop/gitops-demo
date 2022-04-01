@@ -5,11 +5,7 @@ metadata:
 placementBindingDefaults:
   name: binding-network-policies
 policyDefaults:
-  namespaceSelector:
-    exclude:
-      - kube-*
-    include: 
-      - sushi-gitops
+  namespace: sushi-gitops
   remediationAction: inform
   placement:
     clusterSelectors:
