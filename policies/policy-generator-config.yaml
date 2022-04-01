@@ -16,3 +16,8 @@ policies:
       - path: allow-ingress.yaml
       - path: allow-monitoring.yaml
       - path: allow-same-namespace.yaml
+  - name: default-limits-policies
+    manifests:
+      - path: limitrange.yaml
+      - path: quotas.yaml
+      
