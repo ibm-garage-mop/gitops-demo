@@ -7,9 +7,9 @@ placementBindingDefaults:
 policyDefaults:
   namespace: sushi-gitops
   remediationAction: inform
-  placement:
-    clusterSelectors:
-      vendor: "OpenShift"
+  # placement:
+  #   clusterSelectors:
+  #     sushi: "true"
 policies:
   - name: default-network-policies
     manifests:
