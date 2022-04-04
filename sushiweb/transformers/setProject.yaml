@@ -10,3 +10,4 @@ metadata:
 
 targets:
 - fieldPath: metadata/namespace
+- fieldPath: metadata/labels/seb

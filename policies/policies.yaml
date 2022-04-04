@@ -1,0 +1,157 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: Policy
+metadata:
+  annotations:
+    policy.open-cluster-management.io/categories: PR.IP Information Protection Processes and Procedures
+    policy.open-cluster-management.io/controls: PR.IP-1 Baseline Configuration
+    policy.open-cluster-management.io/standards: NIST-CSF
+  name: sushi-policies
+  namespace: rhacm-policies
+spec:
+  disabled: false
+  policy-templates:
+    - objectDefinition:
+        apiVersion: policy.open-cluster-management.io/v1
+        kind: ConfigurationPolicy
+        metadata:
+          name: limite-ranges-container-limit-range
+        spec:
+          namespaceSelector:
+            exclude:
+              - kube-*
+            include:
+              - sushi*
+          object-templates:
+            - complianceType: musthave
+              objectDefinition:
+                apiVersion: v1
+                kind: LimitRange
+                metadata:
+                  name: container-limit-range
+                spec:
+                  limits:
+                    - default:
+                        cpu: 500m
+                        memory: 512Mi
+                      defaultRequest:
+                        cpu: 50m
+                        memory: 256Mi
+                      type: Container
+          remediationAction: inform
+          severity: medium
+    - objectDefinition:
+        apiVersion: policy.open-cluster-management.io/v1
+        kind: ConfigurationPolicy
+        metadata:
+          name: default-quotas
+        spec:
+          namespaceSelector:
+            exclude:
+              - kube-*
+            include:
+              - sushi*
+          object-templates:
+            - complianceType: musthave
+              objectDefinition:
+                apiVersion: v1
+                kind: ResourceQuota
+                metadata:
+                  name: resource-quotas
+                spec:
+                  hard:
+                    pods: '4'
+                    requests.cpu: '1'
+                    requests.memory: 1Gi
+                    requests.storage: 2Gi
+                    limits.cpu: '2'
+                    limits.memory: 2Gi
+          remediationAction: inform
+          severity: medium
+    - objectDefinition:
+        apiVersion: policy.open-cluster-management.io/v1
+        kind: ConfigurationPolicy
+        metadata:
+          name: default-network-policies
+        spec:
+          namespaceSelector:
+            exclude:
+              - kube-*
+            include:
+              - sushi*
+          object-templates:
+            - complianceType: musthave
+              objectDefinition:
+                kind: NetworkPolicy
+                apiVersion: networking.k8s.io/v1
+                metadata:
+                  name: allow-from-openshift-ingress
+                spec:
+                  podSelector: {}
+                  ingress:
+                    - from:
+                        - namespaceSelector:
+                            matchLabels:
+                              network.openshift.io/policy-group: ingress
+                  policyTypes:
+                    - Ingress
+            - complianceType: musthave
+              objectDefinition:
+                kind: NetworkPolicy
+                apiVersion: networking.k8s.io/v1
+                metadata:
+                  name: allow-from-openshift-monitoring
+                spec:
+                  podSelector: {}
+                  ingress:
+                    - from:
+                        - namespaceSelector:
+                            matchLabels:
+                              network.openshift.io/policy-group: monitoring
+                  policyTypes:
+                    - Ingress
+            - complianceType: musthave
+              objectDefinition:
+                kind: NetworkPolicy
+                apiVersion: networking.k8s.io/v1
+                metadata:
+                  name: allow-same-namespace
+                spec:
+                  podSelector: {}
+                  ingress:
+                    - from:
+                        - podSelector: {}
+                  policyTypes:
+                    - Ingress
+          remediationAction: inform
+          severity: medium
+  remediationAction: inform
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: binding-limite-ranges
+  namespace: rhacm-policies
+placementRef:
+  apiGroup: apps.open-cluster-management.io
+  kind: PlacementRule
+  name: placement-sushiweb
+subjects:
+  - apiGroup: policy.open-cluster-management.io
+    kind: Policy
+    name: sushi-policies
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement-sushiweb
+  namespace: rhacm-policies
+spec:
+  clusterConditions:
+    - status: 'True'
+      type: ManagedClusterConditionAvailable
+  clusterSelector:
+    matchExpressions:
+      - key: sushi
+        operator: In
+        values: 
+          - 'true'
