@@ -66,19 +66,5 @@ spec:
                   policyTypes:
                     - Ingress
           remediationAction: inform
-          severity: medium
-  remediationAction: inform
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: PlacementBinding
-metadata:
-  name: sushi-networkpolicies
-  namespace: rhacm-policies
-placementRef:
-  apiGroup: apps.open-cluster-management.io
-  kind: PlacementRule
-  name: placement-sushiweb
-subjects:
-  - apiGroup: policy.open-cluster-management.io
-    kind: Policy
-    name: sushi-networkpolicies
+          severity: high
+  remediationAction: enforce

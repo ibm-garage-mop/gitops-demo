@@ -67,33 +67,4 @@ spec:
                     limits.memory: 2Gi
           remediationAction: inform
           severity: medium
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: PlacementBinding
-metadata:
-  name: sushi-quotas
-  namespace: rhacm-policies
-placementRef:
-  apiGroup: apps.open-cluster-management.io
-  kind: PlacementRule
-  name: placement-sushiweb
-subjects:
-  - apiGroup: policy.open-cluster-management.io
-    kind: Policy
-    name: sushi-quotas
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-sushiweb
-  namespace: rhacm-policies
-spec:
-  clusterConditions:
-    - status: 'True'
-      type: ManagedClusterConditionAvailable
-  clusterSelector:
-    matchExpressions:
-      - key: sushi
-        operator: In
-        values: 
-          - 'true'
+  remediationAction: enforce
