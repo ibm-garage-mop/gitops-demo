@@ -72,7 +72,7 @@ spec:
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
-  name: binding-limite-ranges
+  name: sushi-networkpolicies
   namespace: rhacm-policies
 placementRef:
   apiGroup: apps.open-cluster-management.io
@@ -81,7 +81,7 @@ placementRef:
 subjects:
   - apiGroup: policy.open-cluster-management.io
     kind: Policy
-    name: sushi-policies
+    name: sushi-networkpolicies
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
