@@ -6,7 +6,3 @@ resources:
 
 patches:
   - deployment.yaml
-
-transformers:
-  - ../../transformers/setProject.yaml
-  
