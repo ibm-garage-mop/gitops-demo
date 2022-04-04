@@ -10,4 +10,9 @@ metadata:
 
 targets:
 - fieldPath: metadata/namespace
-- fieldPath: metadata/labels/seb
+- selector:
+    kind: Project
+  fieldPath: metadata/labels/name
+- selector:
+    kind: Project
+  fieldPath: metadata/name
