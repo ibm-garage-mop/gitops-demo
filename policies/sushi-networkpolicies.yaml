@@ -67,7 +67,7 @@ spec:
                     - Ingress
           remediationAction: inform
           severity: medium
-  remediationAction: inform
+  remediationAction: enforce
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
