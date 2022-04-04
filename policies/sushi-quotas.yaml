@@ -81,19 +81,4 @@ subjects:
   - apiGroup: policy.open-cluster-management.io
     kind: Policy
     name: sushi-quotas
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-sushiweb
-  namespace: rhacm-policies
-spec:
-  clusterConditions:
-    - status: 'True'
-      type: ManagedClusterConditionAvailable
-  clusterSelector:
-    matchExpressions:
-      - key: sushi
-        operator: In
-        values: 
-          - 'true'
+
