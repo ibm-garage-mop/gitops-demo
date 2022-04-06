@@ -9,11 +9,13 @@ policyDefaults:
   placement:
     name: sushi-placement-rule
     clusterSelectors:
-      matchExpressions:
-        - key: sushi
-          operator: In
-          values: 
-            - 'true'
+      matchLabels:
+        sushi: 'true'
+      # matchExpressions:
+      #   - key: sushi
+      #     operator: In
+      #     values: 
+      #       - 'true'
   remediationAction: enforce
   severity: medium
 policies:
