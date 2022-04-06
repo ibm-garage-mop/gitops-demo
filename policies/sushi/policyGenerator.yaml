@@ -20,6 +20,8 @@ policyDefaults:
   severity: medium
 policies:
   - name: sushi-policy-networkpolicies
+    namespaceSelector:
+    
     consolidateManifests: false
     manifests:
       - path: sushi-networkpolicies.yaml
