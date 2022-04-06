@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement-sushiweb
+  name: placement-sushi-policies
   namespace: rhacm-policies
 spec:
   clusterConditions:
@@ -9,7 +9,7 @@ spec:
       type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
-      - key: sushi
+      - key: name
         operator: In
         values: 
-          - 'true'
+          - 'local-cluster'
