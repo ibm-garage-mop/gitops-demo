@@ -6,12 +6,12 @@ metadata:
     apps.open-cluster-management.io/git-path: policies/sushi
     apps.open-cluster-management.io/reconcile-option: merge
   labels:
-    app: policy-sushi
-  name: policy-sushi
-  namespace: rhacm-policy
+    app: sushi-policies
+  name: sushi-policies
+  namespace: rhacm-policies
 spec:
   channel: rhacm-policies/policy-sushi
   placement:
     placementRef:
       kind: PlacementRule
-      name: sushi-placement
+      name: placement-sushiweb
