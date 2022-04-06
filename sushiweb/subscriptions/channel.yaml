@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  annotations: 
+    apps.open-cluster-management.io/reconcile-rate: High
+    apps.open-cluster-management.io/github-path: apps
+  labels:
+    app: sushiweb
+  name: sushiweb
+  namespace: sushiweb-rhacm
+spec:
+  type: GitHub
+  pathname: https://github.com/ibm-garage-mop/gitops-demo.git
