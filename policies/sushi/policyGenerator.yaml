@@ -9,7 +9,11 @@ policyDefaults:
   placement:
     name: placement-sushiweb
     clusterSelectors:
-      name: local-cluster
+      matchExpressions:
+        - key: sushi
+          operator: In
+          values: 
+            - 'true'
   remediationAction: enforce
   severity: medium
 policies:

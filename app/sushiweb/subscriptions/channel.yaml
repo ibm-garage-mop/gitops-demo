@@ -3,7 +3,7 @@ kind: Channel
 metadata:
   annotations: 
     apps.open-cluster-management.io/reconcile-rate: medium
-    apps.open-cluster-management.io/github-path: apps
+    apps.open-cluster-management.io/github-path: app
   labels:
     app: sushi-policies
   name: policy-sushi
