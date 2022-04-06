@@ -21,7 +21,10 @@ policyDefaults:
 policies:
   - name: sushi-policy-networkpolicies
     namespaceSelector:
-    
+      exclude:
+        - kube-*
+      include:
+        - sushi*
     consolidateManifests: false
     manifests:
       - path: sushi-networkpolicies.yaml
