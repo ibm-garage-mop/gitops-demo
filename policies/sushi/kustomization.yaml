@@ -8,5 +8,5 @@ kind: Kustomization
 
 generators:
   - policyGenerator.yaml
-commonLabels:
-  env: prod
+# commonLabels:
+#   env: prod
