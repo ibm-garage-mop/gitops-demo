@@ -8,8 +8,5 @@ spec:
     - status: 'True'
       type: ManagedClusterConditionAvailable
   clusterSelector:
-    matchExpressions:
-      - key: sushi
-        operator: In
-        values: 
-          - 'true'
+    matchLabels:
+      local-cluster: 'true'

@@ -8,8 +8,10 @@ spec:
     - status: 'True'
       type: ManagedClusterConditionAvailable
   clusterSelector:
-    matchExpressions:
-      - key: name
-        operator: In
-        values: 
-          - 'local-cluster'
+    matchLabels:
+      local-cluster: 'true'
+    # matchExpressions:
+    #   - key: name
+    #     operator: In
+    #     values: 
+    #       - 'local-cluster'
