@@ -5,9 +5,9 @@ metadata:
     apps.open-cluster-management.io/reconcile-rate: medium
     apps.open-cluster-management.io/github-path: apps
   labels:
-    app: sushiweb
-  name: sushiweb
-  namespace: sushiweb-rhacm
+    app: sushi-policies
+  name: policy-sushi
+  namespace: rhacm-policies
 spec:
   type: GitHub
   pathname: https://github.com/ibm-garage-mop/gitops-demo.git

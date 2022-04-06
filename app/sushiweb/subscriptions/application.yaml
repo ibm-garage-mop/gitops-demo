@@ -12,4 +12,4 @@
           - key: app
             operator: In 
             values: 
-              - sushiweb
+              - sushi-policies
