@@ -21,6 +21,6 @@ policies:
     consolidateManifests: false
     manifests:
       - path: sushi-networkpolicies.yaml
-  - name: sushi-policy-quotas
-    manifests:
-      - path: sushi-quotas.yaml
+  # - name: sushi-policy-quotas
+  #   manifests:
+  #     - path: sushi-quotas.yaml
