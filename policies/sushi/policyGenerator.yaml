@@ -7,7 +7,7 @@ placementBindingDefaults:
 policyDefaults:
   namespace: rhacm-policies
   placement:
-    name: placement-sushiweb
+    name: sushi-placement-rule
     clusterSelectors:
       matchExpressions:
         - key: sushi
