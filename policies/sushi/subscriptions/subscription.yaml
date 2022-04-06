@@ -10,7 +10,7 @@ metadata:
   name: sushi-policies
   namespace: rhacm-policies
 spec:
-  channel: rhacm-policies/policy-sushi
+  channel: rhacm-policies/gitops-demo
   placement:
     placementRef:
       kind: PlacementRule

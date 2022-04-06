@@ -1,0 +1,37 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: sushi-policy-generator
+placementBindingDefaults:
+  name: sushi-placement-binding
+policyDefaults:
+  namespace: rhacm-policies
+  placement:
+    name: placement-sushiweb
+    clusterSelectors:
+      name: local-cluster
+  remediationAction: enforce
+  severity: medium
+policies:
+  # - name: policy-app
+  #   manifests:
+  #     - path: policy1_deployment
+  #       patches:
+  #         - apiVersion: apps/v1
+  #           kind: Deployment
+  #           metadata:
+  #             name: gitops-demo
+  #             namespace: gitops-demo
+  #           spec:
+  #             template:
+  #               spec:
+  #                 containers:
+  #                   - name: gitops-demo
+  #                     image: quay.io/centos7/httpd-24-centos7:2.4
+  - name: sushi-policy-networkpolicies
+    consolidateManifests: false
+    manifests:
+      - path: sushi-networkpolicies.yaml
+  - name: sushi-policy-quotas
+    manifests:
+      - path: sushi-quotas.yaml
