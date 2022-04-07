@@ -7,3 +7,4 @@ resources:
 - channel.yaml
 - subscription.yaml
 - application.yaml
+- rhacm-channels-ns.yaml
