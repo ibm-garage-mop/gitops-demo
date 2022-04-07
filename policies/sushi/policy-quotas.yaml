@@ -48,6 +48,7 @@ spec:
           namespaceSelector:
             exclude:
               - kube-*
+              - sushi-pipeline
             include:
               - sushi*
           object-templates:
