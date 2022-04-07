@@ -3,7 +3,7 @@ kind: PlacementRule
 metadata:
   labels:
     app: sushiweb
-  name: sushiweb-placement-policies
+  name: placement-sushi
   namespace: sushiweb-rhacm
 spec:
   # clusters:

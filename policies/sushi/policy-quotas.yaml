@@ -77,7 +77,7 @@ metadata:
 placementRef:
   apiGroup: apps.open-cluster-management.io
   kind: PlacementRule
-  name: placement-sushiweb
+  name: placement-sushi
 subjects:
   - apiGroup: policy.open-cluster-management.io
     kind: Policy
