@@ -6,7 +6,7 @@ resources:
   - policy-quotas.yaml
   - policy-networkpolicies.yaml
 
-generators:
+# generators:
 #  - policyGenerator.yaml
 # commonLabels:
 #   env: prod
