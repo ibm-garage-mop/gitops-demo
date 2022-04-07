@@ -8,5 +8,5 @@ metadata:
   name: sushiweb
   namespace: sushiweb-rhacm
 spec:
-  type: GitHub
+  type: Git
   pathname: https://github.com/ibm-garage-mop/gitops-demo.git
