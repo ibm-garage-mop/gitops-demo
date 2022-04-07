@@ -4,7 +4,7 @@
     metadata:
       name: sushiweb
       labels:
-        app: sushiweb-rhacm
+        app: sushiweb
       namespace: sushiweb-rhacm
     spec:
       selector:
@@ -12,4 +12,4 @@
           - key: app
             operator: In 
             values: 
-              - sushi-policies
+              - sushiweb
