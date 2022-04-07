@@ -5,7 +5,7 @@ metadata:
     apps.open-cluster-management.io/reconcile-rate: high
     apps.open-cluster-management.io/github-path: app/sushiweb
   labels:
-    app: sushiweb-rhacm
+    app: sushiweb
   name: sushiweb
   namespace: sushiweb-rhacm
 spec:
