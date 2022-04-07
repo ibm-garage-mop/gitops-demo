@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: sushiweb
-          image: quay.io/schabrolles/sushiweb:rhacm
+          image: quay.io/schabrolles/sushiwe:prod
