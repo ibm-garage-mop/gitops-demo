@@ -7,8 +7,11 @@ metadata:
     app: sushiweb
   namespace: sushiweb-rhacm
   annotations:
-    apps.open-cluster-management.io/github-path: apps/sushiweb
+    apps.open-cluster-management.io/github-path: apps/sushiweb/base
     apps.open-cluster-management.io/github-branch: main
+    apps.open-cluster-management.io/reconcile-option: merge
+    app.kubernetes.io/part-of: sushiweb
+    apps.open-cluster-management.io/reconcile-rate: high
 spec:
   channel: sushiweb-rhacm/sushiweb
   placement:
