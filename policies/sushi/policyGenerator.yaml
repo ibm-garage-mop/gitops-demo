@@ -15,5 +15,9 @@ policies:
     manifests:
       - path: netpolicy-deny-other-ns.yaml
     namespaceSelector:
-      exclude: [kube-*, sushiweb-pipeline]
-      include: [sushi]
+      exclude:
+        - kube-*
+        - openshift*
+        - sushiweb-pipeline]
+      include: 
+        - sushi*
