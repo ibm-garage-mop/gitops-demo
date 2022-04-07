@@ -11,7 +11,7 @@ policyDefaults:
       sushi: 'true'
   remediationAction: enforce
 policies:
-  - name: allow-same-namespace.yaml
+  - name: deny-other-namespaces
     manifests:
       - path: netpolicy-deny-other-ns.yaml
     namespaceSelector:
