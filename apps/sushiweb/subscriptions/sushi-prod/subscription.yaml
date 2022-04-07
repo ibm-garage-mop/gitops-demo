@@ -2,7 +2,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
   name: sushiweb
-  namespace: sushi-dev
+  namespace: sushi-prod
   annotations:
     apps.open-cluster-management.io/github-path: apps/sushiweb/layers/sushi-prod
     apps.open-cluster-management.io/git-branch: seb
