@@ -9,6 +9,7 @@ bases:
 
 patches:
   - application.yaml
+  - channel.yaml
   - subscription.yaml
   - placementrule.yaml
 
