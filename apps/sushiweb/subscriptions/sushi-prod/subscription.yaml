@@ -5,4 +5,4 @@ metadata:
   namespace: sushi-prod
   annotations:
     apps.open-cluster-management.io/github-path: apps/sushiweb/layers/sushi-prod
-    apps.open-cluster-management.io/git-branch: seb
+    apps.open-cluster-management.io/git-branch: main

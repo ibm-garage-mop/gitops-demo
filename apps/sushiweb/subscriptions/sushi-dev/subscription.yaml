@@ -5,6 +5,6 @@ metadata:
   namespace: sushi-dev
   annotations:
     apps.open-cluster-management.io/github-path: apps/sushiweb/layers/sushi-dev
-    apps.open-cluster-management.io/git-branch: seb
+    apps.open-cluster-management.io/git-branch: main
 # spec:
 #   channel: sushi-dev/rhacm-demo
