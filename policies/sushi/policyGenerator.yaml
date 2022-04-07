@@ -5,9 +5,6 @@ metadata:
 placementBindingDefaults:
   name: binding-sushi-netpolicies
 policyDefaults:
-  namespaceSelector:
-    exclude: [kube-*, sushiweb-pipeline]
-    include: [sushi]
   placement:
     name: sushi-placement
     clusterSelectors:
@@ -17,3 +14,6 @@ policies:
   - name: allow-same-namespace.yaml
     manifests:
       - path: netpolicy-deny-other-ns.yaml
+    namespaceSelector:
+      exclude: [kube-*, sushiweb-pipeline]
+      include: [sushi]
