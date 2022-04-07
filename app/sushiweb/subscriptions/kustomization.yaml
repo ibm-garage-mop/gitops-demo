@@ -7,6 +7,3 @@ resources:
 - channel.yaml
 - subscription.yaml
 - application.yaml
-- policy-networkpolicies.yaml
-- policy-quotas.yaml
-
