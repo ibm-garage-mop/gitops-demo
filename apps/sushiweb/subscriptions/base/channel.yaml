@@ -6,7 +6,7 @@ metadata:
   labels:
     app: sushiweb
   name: sushiweb
-  namespace: sushiweb-rhacm
+  namespace: rhacm-channels
 spec:
   type: Git
   pathname: https://github.com/ibm-garage-mop/gitops-demo.git

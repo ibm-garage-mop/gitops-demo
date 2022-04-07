@@ -12,7 +12,7 @@ metadata:
     apps.open-cluster-management.io/reconcile-option: merge
     apps.open-cluster-management.io/reconcile-rate: high
 spec:
-  channel: sushiweb-rhacm/sushiweb
+  channel: rhacm-channels/rhacm-demo
   placement:
     placementRef:
       kind: PlacementRule
