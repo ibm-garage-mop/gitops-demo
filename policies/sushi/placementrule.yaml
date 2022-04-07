@@ -12,11 +12,11 @@ spec:
   # clusterSelector:
   #   # matchLabels:
   #   #   name: 'ruby
-  #   matchExpressions:
-  #     - key: name
-  #       operator: In
-  #       values: 
-  #         - 'local-cluster'
+    matchExpressions:
+      - key: sushi
+        operator: In
+        values: 
+          - 'true'
   clusterConditions:
     - type: ManagedClusterConditionAvailable
       status: "True"
