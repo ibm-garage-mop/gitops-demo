@@ -9,14 +9,14 @@ metadata:
 spec:
   # clusters:
   #   - name: ruby
-  # clusterSelector:
-  #   # matchLabels:
-  #   #   name: 'ruby
-  #   matchExpressions:
-  #     - key: name
-  #       operator: In
-  #       values: 
-  #         - 'local-cluster'
+  clusterSelector:
+    matchLabels:
+      sushi: 'true'
+    # matchExpressions:
+    #   - key: sushi
+    #     operator: In
+    #     values: 
+    #       - 'true'
   clusterConditions:
     - type: ManagedClusterConditionAvailable
       status: "True"

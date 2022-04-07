@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: sushiweb-placement
+spec:
+  # clusters:
+  #   - name: ruby
+  clusterSelector:
+    matchLabels:
+      sushi: 'true'
+      env: 'prod'
