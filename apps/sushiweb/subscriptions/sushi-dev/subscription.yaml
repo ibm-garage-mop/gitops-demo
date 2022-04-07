@@ -4,5 +4,5 @@ metadata:
   name: sushiweb
   namespace: sushi-dev
   annotations:
-    apps.open-cluster-management.io/github-path: apps/sushiweb/base
+    apps.open-cluster-management.io/github-path: apps/sushiweb/layers/sushi-dev
     apps.open-cluster-management.io/git-branch: seb
