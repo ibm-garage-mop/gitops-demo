@@ -10,7 +10,6 @@ metadata:
     apps.open-cluster-management.io/github-path: apps/sushiweb/base
     apps.open-cluster-management.io/github-branch: seb
     apps.open-cluster-management.io/reconcile-option: merge
-    app.kubernetes.io/part-of: sushiweb
     apps.open-cluster-management.io/reconcile-rate: high
 spec:
   channel: sushiweb-rhacm/sushiweb

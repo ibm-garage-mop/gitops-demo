@@ -9,7 +9,4 @@ metadata:
 # value:  not specified!
 
 targets:
-- fieldPath: metadata/namespace
-- selector:
-    kind: Namespace
-  fieldPath: metadata/name
+- fieldPath: app.kubernetes.io/part-of
