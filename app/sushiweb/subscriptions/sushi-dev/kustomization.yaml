@@ -4,8 +4,8 @@ kind: Kustomization
 bases:
   - ../base
 
-resources:
-  - namespace.yaml
+# resources:
+#   - namespace.yaml
 
 patches:
   - application.yaml
