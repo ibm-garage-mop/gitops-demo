@@ -4,8 +4,9 @@ kind: Kustomization
 bases:
   - ../../base
 
-resources:
-  # - namespace.yaml
+# resources:
+#   - namespace.yaml
 
-transformers:
-  # - transformer-setProject.yaml
+transformers: 
+# - transformer-setProject.yaml
+  - global-labels.yaml
