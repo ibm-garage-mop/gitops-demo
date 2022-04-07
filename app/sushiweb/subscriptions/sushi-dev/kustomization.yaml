@@ -4,7 +4,7 @@ kind: Kustomization
 # resources:
 patches:
   - namespace.yaml
-  - subscriptions.yaml
+  - subscription.yaml
   - placementrule.yaml
 
 # transformers:
