@@ -4,7 +4,7 @@ metadata:
   labels:
     app: sushiweb
   name: placement-sushi
-  namespace: sushiweb-rhacm
+  namespace: rhacm-policies
 spec:
   # clusters:
   #   - name: ruby
