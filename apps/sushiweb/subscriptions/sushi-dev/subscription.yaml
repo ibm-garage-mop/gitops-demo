@@ -6,3 +6,5 @@ metadata:
   annotations:
     apps.open-cluster-management.io/github-path: apps/sushiweb/sushi-dev
     apps.open-cluster-management.io/git-branch: seb
+spec:
+  channel: sushi-dev/rhacm-demo

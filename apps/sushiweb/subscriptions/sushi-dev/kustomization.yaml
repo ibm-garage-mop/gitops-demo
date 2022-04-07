@@ -9,7 +9,7 @@ resources:
 
 patches:
   - application.yaml
-  # - channel.yaml
+  - channel.yaml
   - subscription.yaml
   - placementrule.yaml
 
