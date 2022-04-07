@@ -7,5 +7,5 @@ patches:
   - subscriptions.yaml
   - placementrule.yaml
 
-transformers:
-  - ../transformer-setProject.yaml
+# transformers:
+#   - ../transformer-setProject.yaml

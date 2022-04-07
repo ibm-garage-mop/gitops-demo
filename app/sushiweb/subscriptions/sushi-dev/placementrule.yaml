@@ -1,7 +1,8 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: sushiweb-placement
+  name: sushi-placement
+  namespace: sushi-dev
 spec:
   # clusters:
   #   - name: ruby
