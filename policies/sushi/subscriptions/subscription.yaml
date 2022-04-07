@@ -14,4 +14,4 @@ spec:
   placement:
     placementRef:
       kind: PlacementRule
-      name: placement-sushi-policies
+      name: policies-placement

@@ -6,4 +6,4 @@ resources:
   - channel.yaml
   - namespace.yaml
   - subscription.yaml
-  - sushi-placement.yaml
+  - placement.yaml

@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement-sushi-policies
+  name: policies-placement
   namespace: rhacm-policies
 spec:
   clusterConditions:
