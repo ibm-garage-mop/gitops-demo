@@ -46,11 +46,11 @@ spec:
           name: default-quotas
         spec:
           namespaceSelector:
+            include:
+              - sushi*
             exclude:
               - kube-*
               - sushiweb-pipeline
-            include:
-              - sushi*
           object-templates:
             - complianceType: musthave
               objectDefinition:
