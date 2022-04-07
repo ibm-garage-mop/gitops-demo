@@ -8,4 +8,4 @@ patches:
   - deployment.yaml
 
 transformers: 
-  - ../../transformer-partof-label.yaml
+  - ../transformer-partof-label.yaml

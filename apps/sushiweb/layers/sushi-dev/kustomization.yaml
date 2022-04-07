@@ -8,5 +8,5 @@ bases:
 #   - namespace.yaml
 
 transformers: 
-  - ../../transformer-partof-label.yaml
+  - ../transformer-partof-label.yaml
   # - global-labels.yaml
