@@ -1,0 +1,22 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  labels:
+    app: sushiweb
+  name: placement-sushi
+  namespace: rhacm-policies
+spec:
+  # clusters:
+  #   - name: ruby
+  clusterSelector:
+  #   # matchLabels:
+  #   #   name: 'ruby
+    matchExpressions:
+      - key: sushi
+        operator: In
+        values: 
+          - 'true'
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  # clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
