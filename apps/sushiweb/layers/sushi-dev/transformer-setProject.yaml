@@ -9,4 +9,7 @@ metadata:
 # value:  not specified!
 
 targets:
-- fieldPath: metadata/labels/app.kubernetes.io/part-of
+- slector:
+  kind: Deployment
+  fieldPath: metadata/labels/app.kubernetes.io\/part-of
+

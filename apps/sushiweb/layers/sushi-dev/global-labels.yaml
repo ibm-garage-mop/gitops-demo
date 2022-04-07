@@ -3,7 +3,7 @@ kind: LabelTransformer
 metadata:
   name: global-labels
 labels:
-  app.kubernetes.io/part-of: 
+  app.kubernetes.io/part-of: sushi-dev
 fieldSpecs:
 - path: metadata/labels
   kind: Deployment
