@@ -14,4 +14,4 @@ spec:
   placement:
     placementRef:
       kind: PlacementRule
-      name: sushiweb-placement
+      name: sushi-placement
