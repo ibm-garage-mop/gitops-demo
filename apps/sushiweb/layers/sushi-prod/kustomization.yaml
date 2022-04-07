@@ -6,3 +6,6 @@ resources:
 
 patches:
   - deployment.yaml
+
+transformers: 
+  - ../../transformer-partof-label.yaml
