@@ -1,0 +1,12 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  annotations: 
+    apps.open-cluster-management.io/reconcile-rate: high
+  labels:
+    app: sushiweb
+  name: rhacm-demo
+  namespace: rhacm-channels
+spec:
+  type: Git
+  pathname: https://github.com/ibm-garage-mop/gitops-demo.git

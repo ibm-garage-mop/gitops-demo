@@ -1,0 +1,39 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: sushi-prod
+  labels:
+    app: sushiweb
+  namespace: sushiweb
+  annotations:
+    apps.open-cluster-management.io/github-path: apps/sushiweb/layers/sushi-prod
+    apps.open-cluster-management.io/github-branch: main
+    apps.open-cluster-management.io/reconcile-option: merge
+    apps.open-cluster-management.io/reconcile-rate: high
+spec:
+  channel: rhacm-channels/rhacm-demo
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: sushi-prod-placement
+---
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: sushi-dev
+  labels:
+    app: sushiweb
+  namespace: sushiweb
+  annotations:
+    apps.open-cluster-management.io/github-path: apps/sushiweb/layers/sushi-dev
+    apps.open-cluster-management.io/github-branch: dev
+    apps.open-cluster-management.io/reconcile-option: merge
+    apps.open-cluster-management.io/reconcile-rate: high
+spec:
+  channel: rhacm-channels/rhacm-demo
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: sushi-dev-placement
