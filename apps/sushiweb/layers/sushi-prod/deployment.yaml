@@ -3,9 +3,9 @@ apiVersion: apps/v1
 metadata:
   name: sushiweb
 spec:
-  replicas: 3
+  replicas: 1
   template:
     spec:
       containers:
         - name: sushiweb
-          image: quay.io/schabrolles/sushiweb:dev
+          image: quay.io/schabrolles/sushiweb:prod
