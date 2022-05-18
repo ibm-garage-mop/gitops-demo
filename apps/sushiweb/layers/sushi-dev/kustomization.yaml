@@ -7,6 +7,9 @@ bases:
 # resources:
 #   - namespace.yaml
 
+patches:
+  - deployment.yaml
+
 transformers: 
   - ../transformer-partof-label.yaml
   # - global-labels.yaml
